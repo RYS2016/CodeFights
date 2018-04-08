@@ -1,0 +1,10 @@
+function shapeArea(n) {
+     //n = 1; 1 + ((n-1) * 4) = 1
+   
+   var squerArea = 1;
+  
+	for (var i = 1; i < n; i++) {
+		squerArea += 4 * i;
+	}
+	return squerArea;    
+}
