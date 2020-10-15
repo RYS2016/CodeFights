@@ -1,0 +1,11 @@
+function reverseInParentheses(inputString) {
+    
+while (inputString.indexOf(")",0)!=-1) {
+       var c = inputString.indexOf(")", 0);
+       var a = inputString.lastIndexOf('(', c);
+       var b = inputString.slice(a + 1, c).split("").reverse().join("");
+       var inputString = inputString.slice(0, a) +b + inputString.slice(c + 1); 
+
+  }
+return inputString;
+}
