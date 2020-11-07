@@ -1,0 +1,13 @@
+function digitsProduct(product) {
+  "use strict";
+  if (product == 0) return 10;
+  if (product < 10) return product;
+  let result = [];
+  for (let i = 9; i >= 2; i--) {
+    while (product % i == 0) {
+      result.unshift(i);
+      product /= i;
+    }
+  }
+  return product == 1 ? Number(result.join("")) : -1;
+}
